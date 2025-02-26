@@ -1,0 +1,153 @@
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.Header{
+    display: grid;
+    grid-template-columns:65% auto 50%;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 50px;
+}
+.Tacvu{
+    display: grid;
+    grid-template-columns: 60% 40% 40%;
+}
+#pro{
+    color: white;
+}
+#pro:hover{
+    color: bisque;
+}
+#about{
+    color: white;
+}
+#about:hover{
+    color:bisque;
+}
+#contact{
+    color: white;
+}
+#contact:hover{
+    color: bisque;
+}
+.body{
+    background-color: aquamarine;
+    color: white;
+    font-family: fantasy;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+img{
+    width: 30%;
+    height: 50%;
+}
+#Tieude{
+    margin-top: 2%;
+    font-size: 40px;
+}
+#Mota{
+    font-size: 14px;
+    font-family: monospace;
+    margin-top: 2%;
+}
+.footer{
+    font-size: 23px;
+    color: black;
+    background-color: white;
+    
+} 
+#Mota2{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-weight:bold;
+}
+.About{
+    background-color: aquamarine;
+    
+    color: white;
+    
+}
+#TD{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#MT{
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 35px;
+}
+#down{
+    margin-left: 42%;
+    font-size: 20px;
+    height: 40px;
+    width:200px;
+    color: white;
+    background-color: aquamarine;
+    border:1px solid white;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+#down:hover{
+    color: black;
+}
+#Thongtin{
+    background: white;
+}
+#CTM{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 7%;
+    font-size: 23px;
+    margin-bottom: 3%;
+}
+.TTC{
+    margin-left: 30%;
+    line-height: 40px;
+    font-size: 25px;
+    color: gray;
+    
+    
+}
+input{
+    font-size: 20px;
+}
+#sent{
+    display: flex;
+    justify-content: center
+}
+.error{
+    color: red;
+    font-size: 15px;
+}
+#sent{
+    margin-left: 45%;
+    margin-top: 5%;
+    width:150px;
+    height: 30px;
+    font-size: 20px;
+}
+#sent:hover{
+    color:green;
+}

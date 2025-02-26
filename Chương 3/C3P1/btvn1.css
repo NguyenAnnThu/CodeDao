@@ -1,0 +1,46 @@
+
+    body{
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        padding-right: 5%;
+        width: 25%
+    }
+    .ThongTin{
+        width:75%;
+    }
+p{
+    text-align: justify;
+    padding-right: 5%;
+    margin-bottom:-10px;
+    font-size: 18px;
+}
+.TieuDe{
+    font-weight: bold;
+    font-size: 24px;
+}
+#ChiTiet{
+    margin-top:20px;
+    background-color: white;
+    border-width: 1px;
+    border-color: grey;
+    font-size: 1.8vw;
+    width: 10vw;
+    border-radius:2px;
+}
+@media screen and (max-width:768px) {
+    img{
+        display: none;
+    }
+    .ThongTin{
+        width:100%
+    }
+    p{
+        font-size: 14px;
+    }
+    .TieuDe{
+        font-size: 18px;
+    }
+  
+}

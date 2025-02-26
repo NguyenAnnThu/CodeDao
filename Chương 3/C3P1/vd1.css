@@ -1,0 +1,17 @@
+img{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: block; }
+    h1{
+    font-size: 5vw;
+    text-align: center; }
+    div{
+    border-radius: 10px;
+    border-style:groove;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px #AAA; }

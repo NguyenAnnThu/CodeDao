@@ -1,0 +1,55 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.TieuDe{
+    text-align: justify;
+}
+.Rating {
+    font-weight: bold;
+
+}
+.Star {
+    color: rgb(240, 197, 5);
+}
+.SlRating, .DaBan{
+    color: darkgrey;
+    font-weight: lighter;
+}
+.Gia
+{
+    display: flex;
+    align-items: baseline;
+}
+.Tien{
+    font-size:xX-large ;
+    font-weight: bold;
+    padding-right: 20px;
+}
+.Discount{
+    background-color: rgba(196, 191, 191, 0.3);
+    border-radius: 5px;
+    
+}
+.Loai{
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.Sp{
+    display: flex;
+    align-content:space-between;
+    justify-content: space-between
+}
+.Sp1,.Sp2{
+    width:45%;
+    display: flex;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: rgb(169, 169, 169,0.3);
+    padding: 5px;
+    align-items: center;
+}
+.Tensp{
+    padding-left: 10px;
+}

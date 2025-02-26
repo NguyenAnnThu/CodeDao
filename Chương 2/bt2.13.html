@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="">
+            <h1 style="color: red; text-align: center;">Book a table</h1>
+            <fieldset style="text-align: center;">
+                <legend style="text-align:center;">Your name</legend>
+                <input type="text" required>            
+            </fieldset>
+            <fieldset style="text-align: center;" id="sex">
+                <legend>Sex</legend>
+                <input type="radio" name="male" value="Male">Male
+                <input type="radio" name="female" value="Female" checked>Female
+            </fieldset>
+            <fieldset style="text-align: center;">
+                <legend>Size</legend>
+                <input type="radio" name="2">2-person table
+                <input type="radio"checked name="4">4-person table
+                <input type="radio" name="6">6-person table
+            </fieldset>
+            <fieldset style="text-align: center;">
+                <legend>Location</legend>
+                <input type="radio">Indoors
+                <input type="radio">Outdoors
+            </fieldset>
+            <div style="text-align: center;">
+                <input type="button" value="Book table" >
+            </div>
+        </form>
+    </body>
+</html>

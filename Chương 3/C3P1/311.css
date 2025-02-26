@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.product-rating {
+    font-size: 15px;
+}
+.icon {
+    color:rgba(244, 232, 4, 0.982);
+}
+.product-price {
+    font-size: xx-large;
+}
+.product-discount {
+    font-size: medium;
+    background-color:rgb(247, 243, 243);
+}
+.dt1
+{
+    margin-right:20px;
+}
+.text 
+{
+    text-align: left;
+}
+.dt2
+{
+    margin-right: 20px;
+}

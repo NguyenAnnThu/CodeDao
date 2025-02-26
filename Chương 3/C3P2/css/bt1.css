@@ -1,0 +1,68 @@
+
+div{
+    display: block;
+    margin: 8px;
+}
+form{
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+label{
+    color: aliceblue;
+    width: 150px;
+    font-weight: bold;
+}
+body{
+    background-color: burlywood;
+}
+.TT>input{
+    width: 70%;
+}
+@media screen and (max-width:640px) {
+    body{
+        background-color: rgb(29, 134, 155);
+    }
+    .TT>input{
+        width: 85%;
+        margin-top: 4px;
+    }
+    label{
+        color:aliceblue;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+body{
+    background-color: blueviolet;
+}
+form{
+    width: 70%;
+}
+label{
+    width: 150px;
+}
+.TT{
+    display: flex;
+}
+.TT>input{
+    width: 70%;
+}
+}
+@media screen and (min-width:1024px) {
+    body{
+        background-color: rgb(43, 46, 226);
+    }
+    form{
+        width: 60%;
+    }
+    label{
+        width: 150px;
+    }
+    .TT>input{
+        width: 60%;
+    }
+}
