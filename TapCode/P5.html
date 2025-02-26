@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành Phố Việt Nam</title>
+    <script>
+        function showCity(imageSrc, cityName) {
+            document.getElementById('cityImage').src = imageSrc;
+            document.getElementById('cityName').innerText = cityName;
+        }
+    </script>
+    <style>
+        body {
+            width: 500px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .city-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .city {
+            width: 70px;
+            height: 30px;
+            background-color: crimson;
+            color: yellow;
+            text-align: center;
+            line-height: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .city:hover {
+            background-color: darkred;
+        }
+        .image-container {
+            position: relative;
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            border: 2px solid rgb(30, 133, 229);
+        }
+        .city-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="./Huê.jpg" class="city-image" id="cityImage" alt="City Image">
+            <div class="city-name" id="cityName">Thành Phố Huế</div>
+        </div>
+        <div class="city-list">
+            <div class="city" onmouseover="showCity('./HN.jpg', 'Thủ Đô Hà Nội')">Hà Nội</div>
+            <div class="city" onmouseover="showCity('./Huê.jpg', 'Thành Phố Huế')">Huế</div>
+            <div class="city" onmouseover="showCity('./ĐN.jpg', 'Thành Phố Đà Nẵng')">Đà Nẵng</div>
+            <div class="city" onmouseover="showCity('./hcm.jpg', 'Thành Phố Hồ Chí Minh')">TP HCM</div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập 2.3-4</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 20px;
+    }
+    #city-list {
+        margin-right: 20px;
+        line-height: 2;
+    }
+    #city-display {
+        text-align: center;
+        padding: 10px; 
+        border: 5px solid transparent; 
+    }
+    #city-image {
+        max-width: 500px;
+        height: auto;
+        display: none;
+    }
+    #city-name {
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="city-list">
+        <span onmouseover="showCity('hanoi')">Hà Nội</span><br>
+        <span onmouseover="showCity('hue')">Huế</span><br>
+        <span onmouseover="showCity('danang')">Đà Nẵng</span><br>
+        <span onmouseover="showCity('hcm')">TP. HCM</span>
+    </div>
+
+    <div id="city-display">
+        <img id="city-image" src="" alt="City Image">
+        <div id="city-name"></div>
+    </div>
+    <script>
+    function showCity(tp) {
+        const imageContainer = document.getElementById("city-image");
+        const cityName = document.getElementById("city-name");
+        const cityDisplay = document.getElementById("city-display");
+
+        let link = "";
+        let tentp = "";
+        
+        if (tp == "hanoi") {
+            link = './HN.jpg';
+            tentp = "Thủ Đô Hà Nội";
+        } else if (tp == "hue") {
+            link = "./Huê.jpg";
+            tentp = "Cố Đô Huế";
+        } else if (tp == "danang") {
+            link = "./ĐN.jpg";
+            tentp = "Thành Phố Đà Nẵng";
+        } else if (tp == "hcm") {
+            link = "./hcm.jpg";
+            tentp = "Thành Phố Hồ Chí Minh";
+        }
+        imageContainer.src = link;
+        imageContainer.style.display = "block";
+        cityName.textContent = tentp;
+        cityDisplay.style.border = "2px solid blue"; 
+    }
+    </script>
+</body>
+</html>

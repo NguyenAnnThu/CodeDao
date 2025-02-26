@@ -1,0 +1,86 @@
+body{
+    font-size: 3vw;
+    font-family: arial;
+    background-color: aquamarine;
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    display: flex;
+    background-color: antiquewhite;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+ .BT{
+    
+    margin-top: 20px;
+    margin-left: 2%;
+    text-align: center;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+#ad{
+    font-weight: bold;
+}
+#dc{
+    font-size: 2vw;
+    color: gray;
+    margin-bottom: 4vw;
+    
+}
+#P{
+    font-weight: bold;
+}
+#sdt{
+    font-size: 2vw;
+    color: gray;
+    margin-bottom: 4vw;
+}
+#E{
+    font-weight: bold;
+}
+#thu{
+    font-size: 2vw;
+    color: gray;
+
+}
+.BP1{
+    margin-top: 4vw;
+    font-weight: bold;
+    color: blueviolet;  
+}
+.td{
+    font-size: 2vw;
+}
+#name{
+    width: 96%;
+    color: gray;
+    font-size: 2vw;
+    margin-bottom: 3%;
+    
+}
+#email{
+    width: 96%;
+    color: gray;
+    font-size: 2vw;
+    margin-bottom: 2%;
+}
+#mess{
+    width: 96%;
+    color: gray;
+    font-size: 2vw;
+    height: 10vw;
+    margin-bottom: 3%;
+}
+#sb{
+    text-align: center;
+    font-size: 2vw;
+    border-radius: 1vw;
+    background-color: blue;
+    color: white;
+    border-color: blue ;
+    width: 12vw;
+    height: 3vw;
+    margin-bottom: 5%;
+} 

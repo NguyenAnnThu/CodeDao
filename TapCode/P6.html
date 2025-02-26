@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều chỉnh kích cỡ chữ</title>
+</head>
+<body>
+    <p id="nd">Đối với các bạn sinh viên đã chọn DUE làm ngôi nhà thứ hai của mình, các bạn chính là đại sứ thương hiệu của DUE và là trung tâm trong hoạt động của Nhà trường. Hoài bão của các bạn là động lực thúc đẩy chúng tôi luôn tiến về phía trước và ngày càng phải xuất sắc hơn trong giảng dạy, nghiên cứu và phục vụ cộng đồng. Chúng tôi cam kết mang đến cho các bạn một nền giáo dục hiện đại với những trải nghiệm học tập quý giá, nhằm khám phá bản thân, thay đổi tầm nhìn và đạt được những thành công trong cuộc sống.
+
+        Đối với cán bộ viên chức trong toàn trường, sự nghiêm túc và tận tâm trong công việc của các thầy cô và các anh chị là nền tảng vững chắc, tạo nên uy tín và danh tiếng mà chúng ta có được ngày hôm nay. Tôi mong muốn được tiếp tục đồng hành với các đồng nghiệp thân thương, tiếp tục phát huy hơn nữa năng lực chuyên môn nhằm tạo ra môi trường học thuật tốt nhất, giúp nuôi dưỡng và đào tạo ra những thế hệ sinh viên năng động, tự tin, bản lĩnh bước vào thị trường lao động. At expedita nisi vel minima! Aliquam corporis laborum dolor dolore inventore facere eos tenetur reprehenderit sunt.</p>
+    <button onclick="thaykc(2)">+</button>
+    <button onclick="thaykc(-2)">-</button>
+
+    <script>
+        let x= 16; 
+        function thaykc(a) {
+            x += a; 
+            document.getElementById('nd').style.fontSize = x + "px"; 
+        }
+    </script>
+</body>
+</html>
