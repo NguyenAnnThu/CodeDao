@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap:20px;
+            margin: 20px auto;
+            
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            
+        }
+        label{
+            text-align: right;
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="column">
+            <label for="ht">Ho ten:<span>
+                <input type="text" id="ht" name="ht" oninput="updatetext('ht','hts')"></span>
+             </label>   
+            
+            <label for="ns">Ngay sinh:
+               <span>
+                <input type="text" id="ns" name="ns" oninput="updatetext('ns','nss')"></span> </label>
+            <label for="gt">Gioi tinh:<span><input type="txt" id="gt" name="gt" oninput="updatetext('gt','gts')">
+                </span></label>
+               
+                
+            
+       </div>
+       <div class="column">
+          <div>Ho ten:<span id="hts">________</span></div>
+          <div>Ngay sinh:<span id="nss">________</span></div>
+          <div>Gioi tinh:<span id="gts">________</span></div>
+       </div>
+   </div>
+   <script>
+    function updatetext(inputId, outputId){
+        const inputValue= document.getElementById(inputId).value;
+        document.getElementById(outputId).textContent=inputValue ||"________";
+    }
+    </script>
+</body>
+</html>

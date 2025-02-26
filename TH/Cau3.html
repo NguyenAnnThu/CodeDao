@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            background-color: rgb(233, 233, 233);
+            justify-content: center;
+        }
+        .tongthe{
+            display: grid;
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 2px 2px #AAA;
+            
+        }
+        .ten{
+            height: 20px;
+            margin-bottom: 5px;
+            color: #AAA;
+        }
+        .tinnhan{
+            height: 70px;
+            text-align: left;
+            color: #AAA;
+            align-content: center;
+        }
+        @media only screen and (min-width:1024px)
+        {
+            .tongthe{
+                grid-template-columns:100px auto ;
+                grid-template-rows: 30px 20px 20px 70px;
+                gap: 10px 5px;
+                height: 220px;
+            }
+            .item1{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                margin: auto;
+                background-color: chartreuse;
+                width: 100%;
+                margin: auto;
+                border: chartreuse;
+            }
+            .item2{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                margin: auto;
+            }
+        }
+        @media only screen and (max-width:1024px)and (min-width:768px) 
+        {
+            .tongthe{
+                row-gap:5px;
+                height: 350px;
+                width: 300px;
+            }
+            .item1{
+                margin: auto;
+                background-color: chartreuse;
+                width: 100%;
+                margin: auto;
+                border: chartreuse;
+            }
+            .ten{
+                width: 200px;
+            }
+            .ngaysinh{
+                width: 200px;
+            }
+            .tinnhan{
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tongthe">
+        <h1 class="item2">Form nhập thông tin</h1>
+        <div>Họ tên:</div>
+        <input type="text" id="1" value="Nhập họ và tên của bạn" disabled class="ten">
+        <div>Ngày sinh</div>
+        <input type="date" id="2" class="ngaysinh">
+        <div>Địa chỉ:</div>
+        <input type="text" id="3" value="Nhập địa chỉ" class="tinnhan">
+        <button class="item1">Gửi</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function HaNoi(){
+            document.getElementById('Hue').src="./TapCode/HN.jpg"
+        }
+        function Hue(){
+            document.getElementById('Hue').src="TapCode/Huê.jpg";
+        }
+        function DN(){
+            document.getElementById('Hue').src="TapCode/ĐN.jpg";
+        }
+    </script>
+    <style>
+        .Tongthe{
+            display: flex;
+            justify-content: center;
+        }
+        .anh{
+            width: 300px;
+            height: 200px;
+            display: block;
+            margin: auto;
+            border: 1px solid crimson;
+        }
+        .chu{
+           width: 70px;
+            height: 30px;
+            background-color: crimson;
+            color: yellow;
+            text-align: center;
+            align-content: center;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./TapCode/Hu%C3%AA.jpg" class="anh" id="Hue">
+    <div class="Tongthe">
+        <span onclick="HaNoi()" class="chu">Ha Noi</span>
+        <span onclick="Hue()" class="chu">Hue</span>
+        <span onclick="DN()" class="chu">Da Nang</span>
+    </div>
+</body>
+</html>

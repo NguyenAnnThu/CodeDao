@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2.3-1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cột bên trái -->
+        <div class="column">
+            <label for="hoTen">Họ tên:</label>
+            <input type="text" id="hoTen" oninput="updateText('hoTen', 'hoTensau')">
+            
+            <label for="ngaySinh">Ngày sinh:</label>
+            <input type="date" id="ngaySinh" oninput="updateText('ngaySinh', 'ngaySinhsau')">
+            
+            <label for="gioiTinh">Giới tính:</label>
+            <input type="text" id="gioiTinh" oninput="updateText('gioiTinh', 'gioiTinhsau')">
+        </div>
+
+        <!-- Cột bên phải -->
+        <div class="column">
+            <div>Họ tên: <span id="hoTensau">__________</span></div>
+            <div>Ngày sinh: <span id="ngaySinhsau">__________</span></div>
+            <div>Giới tính: <span id="gioiTinhsau">__________</span></div>
+        </div>
+    </div>
+
+    <script>
+        function updateText(dauvao, daura) {
+            const inputValue = document.getElementById(dauvao).value;
+            document.getElementById(daura).textContent = inputValue || "__________";
+        }
+    </script>
+</body>
+</html>

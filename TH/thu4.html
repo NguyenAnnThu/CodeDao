@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function Hoten(){
+            document.getElementById('HT').textContent='Nguyen Anh Thu';
+        }
+    </script>
+    <script>
+        function Ngaysinh(){
+            document.getElementById('NS').textContent='26/11/2004';
+        }
+    </script>
+</head>
+<body>
+    <div>Ho ten:<span id="HT" style="margin-left: 40px">N/A</span></div><br>
+    <div>Ngay sinh:<span id="NS" style="margin-left: 20px">N/A</span></div><br>
+    <button onclick="Hoten()">Ho ten</button>
+    <button onclick="Ngaysinh()" style="margin-left: 30px">Ngay sinh</button>
+</body>
+</html>

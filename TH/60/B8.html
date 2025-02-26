@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p onmouseenter="Hienthi()"
+   onmouseout="Mat()"
+   >Hãy di chuột vào đoạn văn này để xem thông báo</p>
+    <p id="ht"></p>
+   <script>
+        function Hienthi()
+        {
+            document.getElementById('ht').innerHTML='Bạn vừa di chuột vào đoạn văn'
+            document.getElementById('ht').style.color='red'
+        }
+        function Mat()
+        {
+             document.getElementById('ht').innerHTML=''
+        }
+   </script>
+</body>
+</html>

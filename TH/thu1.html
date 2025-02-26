@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2.3-2</title>
+</head>
+<body>
+    <div>
+        <p>Họ tên: <span id="hoTenDisplay">N/A</span></p>
+        <p>Ngày sinh: <span id="ngaySinhDisplay">N/A</span></p>
+    </div>
+    <button onclick="showHoTen()">Họ tên</button>
+    <button onclick="showNgaySinh()">Ngày sinh</button>
+
+    <script>
+        function showHoTen() {
+            document.getElementById('hoTenDisplay').textContent = 'Nguyễn Anh Thư';
+        }
+
+        function showNgaySinh() {
+            document.getElementById('ngaySinhDisplay').textContent = '01/01/2000';
+        }
+    </script>
+</body>
+</html>
