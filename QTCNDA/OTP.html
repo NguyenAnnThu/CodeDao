@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận OTP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4A73FF;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left {
+            flex: 1;
+            background: #F3F5FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .left img {
+            width: 100%;
+            max-width: 300px;
+        }
+        .right {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4A73FF;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #6C5DD3;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #5943B0;
+        }
+        .register {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .register a {
+            color: #4A73FF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="./ảnh.jpg" alt="Hình minh họa học tập">
+        </div>
+        <div class="right">
+            <img src="./logo1.jpg" width="100%" height="90px">
+            <h2>Chúng tôi đã gửi mã OTP đến số điện thoại: <span>xxxxxxxxxx</span></h2>
+            <p style="font-size:12px;">Vui lòng kiểm tra điện thoại để xem tin nhắn văn bản có mã, mã của bạn có 6 kí tự.</p>
+            <input type="text" id="otpInput" maxlength="6" placeholder="Nhập mã của bạn">
+            <a href="./NPW.html"><button onclick="verifyOTP()">Tiếp tục</button></a>
+            <p id="timer" style="display:none;">Gửi lại mã sau <span id="countdown">30</span> giây</p>
+            <p class="resend" id="resendOtp" onclick="resendOtp()">Gửi lại mã OTP</p>
+            <p class="register">Bạn chưa có tài khoản? <a href="./ĐK.html">Đăng ký</a></p>
+        </div>
+    </div>
+    <script>
+        function verifyOTP() {
+            let otp = document.getElementById("otpInput").value;
+            if (otp.length === 6) {
+                alert("Mã OTP hợp lệ! Xử lý tiếp theo...");
+            } else {
+                alert("Vui lòng nhập đúng 6 chữ số OTP!");
+            }
+        }
+        let countdownElement = document.getElementById("countdown");
+        let resendElement = document.getElementById("resendOtp");
+        let otpInput = document.getElementById("otp");
+        let verifyBtn = document.getElementById("verifyBtn");
+        let timerElement = document.getElementById("timer");
+        let countdown;
+
+        otpInput.addEventListener("input", function () {
+            verifyBtn.disabled = this.value.length !== 6;
+        });
+
+        function resendOtp() {
+            let timeLeft = 30;
+            timerElement.style.display = "block";
+            resendElement.style.display = "none";
+            countdownElement.innerText = timeLeft;
+            
+            if (countdown) {
+                clearInterval(countdown);
+            }
+            countdown = setInterval(() => {
+                timeLeft--;
+                countdownElement.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    timerElement.style.display = "none";
+                    resendElement.style.display = "block";
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

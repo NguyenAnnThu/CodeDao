@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5a7ec7;
+        }
+        .container {
+            display: flex;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            overflow: hidden;
+        }
+        .illustration {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+        .illustration img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .content {
+            width: 50%;
+            padding: 30px;
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 100%;
+            height: 90px;
+        }
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background: #f1f3f5;
+        }
+        .input-group i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+            font-size: 17px;
+
+        }
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: black;
+            font-size: 18px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .btn {
+            width: 100%;
+            background: #6b50eb;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background: #5a3ddf;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="illustration">
+            <img src="./ảnh.jpg" alt="Hình ảnh minh họa">
+        </div>
+        <div class="content">
+            <div class="logo">
+                <img src="./logo1.jpg" alt="HT Education">
+            </div>
+            <form id="registerForm">
+                <div class="input-group">
+                    <i>🙍‍♂️</i>
+                    <input type="text" placeholder="Họ và tên" required>
+                </div>
+                <div class="input-group">
+                    <i>📞</i>
+                    <input type="text" placeholder="Số điện thoại" required>
+                </div>
+                <div class="input-group">
+                    <i>🔑</i>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu mới" required>
+                    <span class="toggle-password">👁</span>
+                </div>
+                <div class="input-group">
+                    <i>🔑</i>
+                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới" required>
+                    <span class="toggle-password">👁</span>
+                </div>
+                <p class="error" id="error-message">⚠ Mật khẩu không hợp lệ!</p>
+                <button type="submit" class="btn">Đăng ký tài khoản</button>
+            </form>
+            <br>
+            <div style="font-size:13px"> Bạn đã có tài khoản? <a href="./DN.html">Đăng nhập</a></div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle hiển thị mật khẩu
+        document.querySelectorAll(".toggle-password").forEach(item => {
+            item.addEventListener("click", function () {
+                let input = this.previousElementSibling;
+                if (input.type === "password") {
+                    input.type = "text";
+                    this.textContent = "👁️‍🗨️";  // Đổi icon khi hiển thị mật khẩu
+                } else {
+                    input.type = "password";
+                    this.textContent = "👁"; // Đổi icon khi ẩn mật khẩu
+                }
+            });
+        });
+
+        // Kiểm tra mật khẩu hợp lệ
+        function isValidPassword(password) {
+            const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+            return password.length >= 8 && password.length <= 16 && specialCharRegex.test(password);
+        }
+
+        document.getElementById("registerForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Ngăn chặn load lại trang
+            let passwordInput = document.getElementById("password").value;
+            let confirmPasswordInput = document.getElementById("confirmPassword").value;
+            let errorMessage = document.getElementById("error-message");
+
+            if (!isValidPassword(passwordInput)) {
+                errorMessage.textContent = "⚠ Mật khẩu phải từ 8-16 ký tự và chứa ít nhất 1 ký tự đặc biệt!";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            if (passwordInput !== confirmPasswordInput) {
+                errorMessage.textContent = "⚠ Mật khẩu nhập lại không khớp!";
+                errorMessage.style.display = "block";
+                return;
+            }
+
+            errorMessage.style.display = "none";
+            alert("✅ Đăng ký thành công!");
+        });
+    </script>
+</body>
+</html>

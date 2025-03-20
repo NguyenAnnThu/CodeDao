@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Mật Khẩu Mới</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5a7ec7;
+        }
+        .container {
+            display: flex;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        .illustration {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .illustration img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: gray;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            width: 100%;
+            background: #6B50EB;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none; /* Ẩn lỗi ngay từ đầu */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="illustration">
+            <img src="./ảnh.jpg" alt="Illustration">
+        </div>
+        <div class="form-container">
+            <h2>Tạo mật khẩu mới</h2>
+            <p>Mật khẩu mới có tối thiểu là 8 kí tự và tối đa 16 kí tự với ít nhất 1 ký tự đặc biệt</p>
+            <input type="password" id="password" placeholder="Nhập mật khẩu mới">
+            <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới">
+            <p class="error" id="error-message">⚠ Mật khẩu không hợp lệ!</p>
+            <a href="./Thongbaomk.html"><button class="btn" id="submitBtn">Tiếp tục</button></a>
+            <p class="register">Bạn chưa có tài khoản? <a href="./ĐK.html">Đăng ký</a></p>
+        </div>
+    </div>
+
+    <script>
+        let passwordInput = document.getElementById("password");
+        let confirmPasswordInput = document.getElementById("confirmPassword");
+        let submitBtn = document.getElementById("submitBtn");
+        let errorMessage = document.getElementById("error-message");
+
+        function isValidPassword(password) {
+            const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+            return password.length >= 8 && password.length <= 16 && specialCharRegex.test(password);
+        }
+
+        function validatePassword() {
+            errorMessage.style.display = "none"; // Ẩn lỗi khi người dùng nhập lại
+        }
+
+        passwordInput.addEventListener("input", validatePassword);
+        confirmPasswordInput.addEventListener("input", validatePassword);
+
+        submitBtn.addEventListener("click", function() {
+            if (!isValidPassword(passwordInput.value) || passwordInput.value !== confirmPasswordInput.value) {
+                errorMessage.style.display = "block";
+            } else {
+                alert("✅ Mật khẩu hợp lệ!");
+            }
+        });
+    </script>
+</body>
+</html>
